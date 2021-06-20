@@ -1,0 +1,23 @@
+body {
+  font-family: "lato", "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/*# sourceMappingURL=main.css.map */
