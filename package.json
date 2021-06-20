@@ -1,0 +1,21 @@
+{
+  "name": "custom-portfolio",
+  "version": "1.0.0",
+  "description": "My web portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
+    "watch": "sass --watch ./src/scss:src/assets/css"
+  },
+  "author": "Alejandro Caputto",
+  "license": "ISC",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "parcel": "^2.0.0-beta.2",
+    "sass": "^1.32.8",
+    "tslint": "^6.1.3",
+    "typescript": "^4.3.4"
+  }
+}
