@@ -14,7 +14,7 @@
   }
 }
 @mixin gradient {
-  background: linear-gradient(to right, rgba($dark, 0.95), rgba($purple-dark, 0.95));
+  background: linear-gradient(to right, rgba($black, 0.95), rgba($purple-dark, 0.95));
 }
 
 @mixin absoluteCenter {

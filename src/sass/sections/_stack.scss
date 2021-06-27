@@ -1,0 +1,93 @@
+#it-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include responsive(tab-port) {
+    flex-direction: column;
+  }
+}
+.skills {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  border: 1px solid $fonttourquoise;
+  @include responsive(phone) {
+    margin-top: unset;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  @include responsive(tab-port) {
+    margin-top: unset;
+  }
+  &-description {
+    padding: 10rem;
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+    @include responsive(tab-port) {
+      padding: unset;
+      margin-bottom: 20px;
+      h3 {
+        padding: 0 2rem;
+      }
+      p {
+        padding: 0 2rem;
+
+        margin-right: 0rem;
+      }
+    }
+    h3::before {
+      font-size: 3rem;
+      content: "02. ";
+      color: $fonttourquoise;
+    }
+  }
+  &-group {
+    flex-basis: 33.33333333%;
+    @include responsive(phone) {
+      flex-basis: 100%;
+      border-bottom: 1px solid $fonttourquoise;
+      height: 400px;
+    }
+    text-align: center;
+    &:not(:last-child) {
+      border-right: 1px solid $fonttourquoise;
+    }
+    & > * {
+      padding: 2rem;
+    }
+  }
+}
+.skill-group {
+  &__body p {
+    margin-bottom: 5px;
+  }
+  &__head {
+    margin-top: -3rem;
+    font-size: 2.7rem;
+  }
+  &__icon {
+    i {
+      font-size: 3.2rem;
+      padding: 2rem 5rem;
+      color: $fonttourquoise;
+    }
+  }
+
+  @include responsive(phone) {
+    font-size: 3rem;
+    &__body p {
+      font-size: 2.3rem;
+    }
+    &__head {
+      font-size: 4rem;
+    }
+  }
+}

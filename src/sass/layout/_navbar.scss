@@ -1,0 +1,35 @@
+#navigation {
+  // display: flex;
+  position: fixed;
+  width: 100%;
+  // background-color: khaki;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  div {
+    width: 80%;
+  }
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+  img {
+    width: 5rem;
+    cursor: pointer;
+  }
+  &-items {
+    display: flex;
+    list-style: none;
+    li {
+      display: inline-block;
+      cursor: pointer;
+      padding: 1rem;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-bottom: 1px solid $black;
+        transition: border-bottom 1s;
+      }
+    }
+  }
+}

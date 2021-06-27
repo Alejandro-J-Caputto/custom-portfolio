@@ -1,0 +1,14 @@
+.btn {
+  padding: 2rem;
+  font-size: inherit;
+  color: $fonttourquoise;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: transform 1s;
+  border: 2px solid $fonttourquoise;
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-0.5rem);
+    background-color: rgba($fonttourquoise, .5);
+  }
+}

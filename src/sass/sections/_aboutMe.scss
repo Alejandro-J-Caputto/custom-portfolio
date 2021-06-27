@@ -1,0 +1,85 @@
+.about-me {
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include responsive(tab-port) {
+      flex-direction: column;
+      flex-basis: unset;
+      padding: 2rem;
+    }
+    &-description {
+      width: 50%;
+      @include responsive(tab-port) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        &::before {
+          content: '01.';
+          margin-right: 10px;
+          color: $fonttourquoise;
+        }
+      }
+      p {
+        font-size: 2rem;
+        margin-right: 5rem;
+        line-height: 2.5rem;
+        @include responsive (phone) {
+          font-size: 2rem;
+          margin-right: unset;
+        }
+      }
+    }
+    &-photo {
+      min-width: 30rem;
+      min-height: 30rem;
+      position: relative;
+      @include responsive(tab-port) {
+        margin: 0 auto;
+
+      }
+
+      img {
+        position: absolute;
+        z-index: 1000;
+        width: 30rem;
+        min-width: 30rem;
+        min-height: 30rem;
+        display: inline-block;
+        // filter: contrast(175%) brightness(70%);
+        border-radius: 5px;
+      }
+      &::before {
+        content: '';
+        width: 30rem;
+        height: 30rem;
+        background-color: $fonttourquoise;
+        display: block;
+        position: absolute;
+        z-index: 8000;
+        opacity: .3;
+      }
+      &::after {
+        content: '';
+        width: 30rem;
+        height: 30rem;
+        display: block;
+        position: absolute;
+        border: 2px solid $fonttourquoise;
+        top: 10%;
+        left: 10%;
+        border-radius: 5px;
+        
+        z-index: 1;
+      }
+    }
+  }
+}

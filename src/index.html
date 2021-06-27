@@ -1,16 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/cd9184cd3c.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <title>Alejandro Caputto Web Portfolio</title>
-  <script defer src="./ts/main.ts"></script>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cd9184cd3c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Alejandro Caputto Web Portfolio</title>
+    <script defer src="./ts/main.ts"></script>
+  </head>
+  <body>
+    <main class="layout-wrapper">
+      <div id="navigation">
+        <nav class="nav">
+          <img
+            src="./assets/images/logo-portfolio.png"
+            alt="nav logo"
+            class="nav-logo"
+          />
+          <ul class="nav-items">
+            <li>01. About</li>
+            <li>02. Stack</li>
+            <li>03. Works</li>
+            <li>04. Contact</li>
+          </ul>
+        </nav>
+      </div>
+      <section id="intro" class="intro-wall">
+        <div class="intro-wall__message">
+          <p>Hi my name is,</p>
+          <h1 class="intro-wall__message--heading">Alejandro Caputto.</h1>
+          <h2 class="intro-wall__message--heading-2">
+            I build things for the <span>web.</span>
+          </h2>
+          <p class="intro-wall__message--small-text">
+            I'm a Bern-based junior full stack developer who is focused on being
+            each day a better developer. Currently I'm looking for real
+            challenges, where I can put my skills working for a mission.
+          </p>
+          <button class="btn btn-contact">Get in touch</button>
+        </div>
+        <div class="intro-wall__hero">
+          <img src="./assets/images/code-hero-hell.png" alt="intro hero" />
+        </div>
+      </section>
+      <section class="about-me" id="about">
+        <div class="about-me__card">
+          <div class="about-me__card-description">
+            <h3 class="heading-tertiray--section">About Me</h3>
+            <p>
+              Hi! I'm Alejandro and I enjoy developing and learning. My interest
+              in web development is not new! I was studying computer science
+              when I decided to boost my progress by enrolling in a web
+              development Bootcamp acquiring solid knowledge of information
+              architecture, usability, web analytics and accessibility, among
+              others. My one aim in the coming years is to continue learning and
+              growing as a developer in an amazing team!
+            </p>
+          </div>
+          <div class="about-me__card-photo">
+            <img src="./assets/images/alejandro.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="it-skills">
+        <div class="skills-description">
+          <h3>Tech Stack</h3>
+          <p class="paragraph-introduction">
+            Hi! I'm Alejandro and I enjoy developing and learning. My interest
+            in web development is not new! I was studying computer science when
+            I decided to boost my progress by enrolling in a web development
+            Bootcamp acquiring solid knowledge of information architecture,
+            usability, web analytics and accessibility, among others. My one aim
+            in the coming years is to continue learning and growing as a
+            developer in an amazing team!
+          </p>
+        </div>
+        <div class="skills">
+          <div class="skills-group">
+            <div class="skill-group__icon">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <div class="skill-group__head">
+              <h3>Design</h3>
+            </div>
+            <div class="skill-group__body">
+              <p>Sketch</p>
+              <p>Photoshop</p>
+              <p>Luma Fusion</p>
+            </div>
+          </div>
+          <div class="skills-group">
+            <div class="skill-group__icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="skill-group__head">
+              <h3>Front-end</h3>
+            </div>
+            <div class="skill-group__body">
+              <p>React</p>
+              <p>Angular</p>
+              <p>JavaScript</p>
+              <p>Typescript</p>
+              <p>CSS3</p>
+              <p>SASS</p>
+            </div>
+          </div>
+          <div class="skills-group">
+            <div class="skill-group__icon">
+              <i class="fas fa-server"></i>
+            </div>
+            <div class="skill-group__head">
+              <h3>Back-end</h3>
+            </div>
+            <div class="skill-group__body">
+              <p>Node.js</p>
+              <!-- <p>MySQL & Workbench</p> -->
+              <p>MongoDB</p>
+              <p>Mongoose</p>
+              <p>Express</p>
+              <p>API Rest</p>
+              <p>MySQL & Workbench</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="works">
+        <div class="projects__message">
+          <h3>Somethings I've built</h3>
+          <p>
+            In order to learn as much as possible, I'm developing small apps
+            with the mentioned lenguages and technologies to train and improve
+            my skills. Getting a better understanding of how everithings works
+            with the help of their respective documentations
+          </p>
+        </div>
+        <div class="projects__featured--1">
+          <img src="" alt="journal app" />
+          <div class="projects__description">
+            <h4>Journal App</h4>
+            <p>An small web app to taking notes</p>
+            <ul>
+              <li>reactJS</li>
+              <li>Firebase</li>
+              <li>Redux</li>
+              <li>Typescript</li>
+            </ul>
+          </div>
+        </div>
+        <div class="projects__featured--2">
+          <img src="" alt="journal app" />
+          <div class="projects__description">
+            <h4>Journal App</h4>
+            <p>An small web app to taking notes</p>
+            <ul>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>Typescript</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="" id="stack"></section>
+      <footer></footer>
+    </main>
+  </body>
 </html>

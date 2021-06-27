@@ -1,0 +1,81 @@
+.intro-wall {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  // width: 90%;
+  // background-color: turquoise;
+  // flex-wrap: wrap;
+  // padding:  35rem 5rem;
+  height: 95vh;
+  align-items: center;
+  margin-top: 5rem;
+  div:not(.intro-wall__hero) {
+    // width: 80%;
+    padding: 2rem;
+  }
+  &__hero {
+    img {
+      width: 100%;
+    }
+  }
+  .contact-btn {
+    width: 90%;
+  }
+  button {
+    margin-top: 10px;
+  }
+  &__hero {
+    position: absolute;
+    left: 50%;
+    z-index: 0;
+    opacity: .8;
+    @include responsive(phone) {
+      // position: static;
+      left: 0;
+      opacity: .3;
+    }
+  }
+  &__message {
+    @include responsive(phone) {
+      .intro-wall__message--small-text {
+        width: 100%;
+      }
+    }
+    p:first-child {
+      color: $fonttourquoise;
+      font-size: 2rem;
+      letter-spacing: .3rem;
+    }
+    z-index: 5000;
+    &--heading {
+      font-size: 7rem;
+      @include responsive(phone) {
+        font-size: 5rem;
+
+      }
+    }
+    &--heading-2 {
+      font-size: 7rem;
+      color: $gray-600;
+      margin-bottom: 2rem;
+      span {
+        background-color: white;
+        border-radius: 5px;
+      }
+      @include responsive(phone) {
+        color: $fonttourquoise;
+        span {
+          color: $gray-600;
+        }
+      }
+    }
+    &--small-text {
+      line-height: 2.5rem;
+      width: 50%;
+      font-weight: 700;
+    }
+
+  }
+}
