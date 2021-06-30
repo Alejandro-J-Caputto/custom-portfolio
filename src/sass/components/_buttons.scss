@@ -6,6 +6,7 @@
   border-radius: 5px;
   transition: transform 1s;
   border: 2px solid $fonttourquoise;
+  width: fit-content;
   &:hover {
     cursor: pointer;
     transform: translateY(-0.5rem);

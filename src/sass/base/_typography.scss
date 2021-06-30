@@ -10,3 +10,17 @@ body {
   margin-right: 5rem;
   line-height: 2.5rem;
 }
+.paragraph-introduction--2 {
+  margin-right: 0rem;
+}
+
+@include responsive(phone) {
+  p {
+    font-size: 2.5rem !important; 
+    line-height: 2.5rem;
+
+  }
+  // span {
+  //   font-size: 2.2rem;
+  // }
+}

@@ -14,7 +14,7 @@
       padding: 2rem;
     }
     &-description {
-      width: 50%;
+      width: 55%;
       @include responsive(tab-port) {
         width: 100%;
         margin-bottom: 20px;
@@ -33,7 +33,7 @@
         margin-right: 5rem;
         line-height: 2.5rem;
         @include responsive (phone) {
-          font-size: 2rem;
+          font-size: 2.5rem;
           margin-right: unset;
         }
       }
@@ -43,8 +43,10 @@
       min-height: 30rem;
       position: relative;
       @include responsive(tab-port) {
+        margin: 5rem auto;
+      }
+      @include responsive(phone) {
         margin: 0 auto;
-
       }
 
       img {
@@ -56,6 +58,10 @@
         display: inline-block;
         // filter: contrast(175%) brightness(70%);
         border-radius: 5px;
+        @include responsive(phone) {
+          width: 40rem;
+          position: static;
+        }
       }
       &::before {
         content: '';
@@ -66,6 +72,10 @@
         position: absolute;
         z-index: 8000;
         opacity: .3;
+        @include responsive(phone) {
+          width: 40rem;
+          height: 40rem;
+        }
       }
       &::after {
         content: '';
@@ -79,6 +89,9 @@
         border-radius: 5px;
         
         z-index: 1;
+        @include responsive(phone) {
+          display: none;
+        }
       }
     }
   }

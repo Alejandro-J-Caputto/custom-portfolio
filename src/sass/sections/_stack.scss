@@ -1,93 +1,226 @@
-#it-skills {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @include responsive(tab-port) {
-    flex-direction: column;
-  }
-}
-.skills {
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  width: 65%;
-  border: 1px solid $fonttourquoise;
-  @include responsive(phone) {
-    margin-top: unset;
-    flex-wrap: wrap;
-    width: 80%;
-  }
-  @include responsive(tab-port) {
-    margin-top: unset;
-  }
-  &-description {
-    padding: 10rem;
-    h3 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 2rem;
-      line-height: 2.5rem;
-    }
+#it-stack {
+  .stack-container {
+    padding: 2rem 10rem;
     @include responsive(tab-port) {
-      padding: unset;
-      margin-bottom: 20px;
+      padding: 3rem;
+    }
+    .stack-description {
       h3 {
-        padding: 0 2rem;
+        font-size: 3rem;
+        margin-bottom: 20px;
+        &::before {
+          content: "02.";
+          margin-right: 10px;
+          color: $fonttourquoise;
+        }
       }
       p {
-        padding: 0 2rem;
-
-        margin-right: 0rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 20px;
+        @include responsive(phone) {
+          font-size: 2.5rem;
+          margin-right: unset;
+        }
       }
     }
-    h3::before {
-      font-size: 3rem;
-      content: "02. ";
-      color: $fonttourquoise;
-    }
-  }
-  &-group {
-    flex-basis: 33.33333333%;
-    @include responsive(phone) {
-      flex-basis: 100%;
-      border-bottom: 1px solid $fonttourquoise;
-      height: 400px;
-    }
-    text-align: center;
-    &:not(:last-child) {
-      border-right: 1px solid $fonttourquoise;
-    }
-    & > * {
-      padding: 2rem;
-    }
   }
 }
-.skill-group {
-  &__body p {
-    margin-bottom: 5px;
-  }
-  &__head {
-    margin-top: -3rem;
-    font-size: 2.7rem;
-  }
-  &__icon {
-    i {
-      font-size: 3.2rem;
-      padding: 2rem 5rem;
-      color: $fonttourquoise;
-    }
-  }
+.stack-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  flex-wrap: wrap;
+  .stack-card {
 
-  @include responsive(phone) {
-    font-size: 3rem;
-    &__body p {
-      font-size: 2.3rem;
-    }
+    border-radius: 10px;
+    margin-bottom: 5rem;
     &__head {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
       font-size: 4rem;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      h4 {
+        background-color: $background-soft;
+        color: $fonttourquoise;
+        font-weight: bolder;
+        position: absolute;
+        width: fit-content;
+        padding: 1rem;
+        top: 70%;
+        right: 0%;
+        opacity: 0.85;
+        // transform: translate(-50%, -50%);
+        @include responsive(tab-port) {
+          top: 75%;
+        }
+      }
+    }
+
+    &--1 {
+      height: 40rem;
+      width: 25rem;
+      .stack-card__head {
+        background-image: url("../../assets/images/design-hero.png");
+        height: 50%;
+        @include responsive(tab-port) {
+          height: 60%;
+        }
+      }
+      @include responsive(tab-port) {
+        width: 100%;
+      }
+    }
+    &--2 {
+      height: 70rem;
+      width: 25rem;
+      .stack-card__head {
+        background-image: url("../../assets/images/coding.hero.png");
+        height: 30%;
+        @include responsive(tab-port) {
+          height: 37%;
+        }
+      }
+      @include responsive(tab-port) {
+        width: 100%;
+      }
+    }
+    &--3 {
+      height: 70rem;
+      width: 25rem;
+      .stack-card__head {
+        height: 30%;
+
+        background-image: url("../../assets/images/data-hero.png");
+        @include responsive(tab-port) {
+          // height: 20%;
+          height: 37%;
+        }
+      }
+      @include responsive(tab-port) {
+        width: 100%;
+      }
+    }
+
+    .stack-card__body {
+      display: flex;
+      flex-direction: column;
+      background-color: $background-soft;
+      width: 100%;
+      text-align: center;
+      padding: 2rem;
+      &__message {
+        padding: 2rem;
+        font-size: 2rem;
+      }
+      &__intro {
+        padding: 1rem;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      &__tools {
+        list-style: none;
+        font-size: 3rem;
+      }
     }
   }
 }
+
+// #it-skills {
+//   // display: flex;
+//   // flex-direction: column;
+//   // justify-content: center;
+//   // align-items: center;
+//   @include responsive(tab-port) {
+//     flex-direction: column;
+//   }
+// }
+// .skills {
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   width: 65%;
+//   border: 1px solid $fonttourquoise;
+//   @include responsive(tab-port) {
+//     margin-top: unset;
+//     flex-wrap: wrap;
+//     width: 80%;
+//   }
+//   @include responsive(tab-port) {
+//     margin-top: unset;
+//   }
+//   &-description {
+//     padding: 10rem;
+//     h3 {
+//       font-size: 3rem;
+//       margin-bottom: 20px;
+//     }
+//     p {
+//       font-size: 2rem;
+//       line-height: 2.5rem;
+//     }
+//     @include responsive(tab-port) {
+//       padding: unset;
+//       margin-bottom: 20px;
+//       h3 {
+//         padding: 0 2rem;
+//       }
+//       p {
+//         padding: 0 2rem;
+
+//         margin-right: 0rem;
+//       }
+//     }
+//     h3::before {
+//       font-size: 3rem;
+//       content: "02. ";
+//       color: $fonttourquoise;
+//     }
+//   }
+//   &-group {
+//     flex-basis: 33.33333333%;
+//     @include responsive(phone) {
+//       flex-basis: 100%;
+//       border-bottom: 1px solid $fonttourquoise;
+//       height: 400px;
+//     }
+//     text-align: center;
+//     &:not(:last-child) {
+//       border-right: 1px solid $fonttourquoise;
+//     }
+//     & > * {
+//       padding: 2rem;
+//     }
+//   }
+// }
+// .skill-group {
+//   &__body p {
+//     margin-bottom: 5px;
+//   }
+//   &__head {
+//     margin-top: -3rem;
+//     font-size: 2.7rem;
+//   }
+//   &__icon {
+//     i {
+//       font-size: 3.2rem;
+//       padding: 2rem 5rem;
+//       color: $fonttourquoise;
+//     }
+//   }
+
+//   @include responsive(phone) {
+//     font-size: 3rem;
+//     &__body p {
+//       font-size: 2.3rem;
+//     }
+//     &__head {
+//       font-size: 4rem;
+//     }
+//   }
+// }

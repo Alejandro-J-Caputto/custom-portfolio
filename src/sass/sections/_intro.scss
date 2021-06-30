@@ -23,8 +23,10 @@
   .contact-btn {
     width: 90%;
   }
-  button {
+  a {
+    display: block;
     margin-top: 10px;
+    text-decoration: none;
   }
   &__hero {
     position: absolute;

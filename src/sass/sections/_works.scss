@@ -1,12 +1,141 @@
 .projects {
-  padding: 10rem;
-  h3 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    &::before {
-      content: '03.';
-      margin-right: 10px;
+
+  &-colection {
+    padding: 10rem;
+    @include responsive(tab-port) {
+      padding: 5rem;
+    }
+    &__intro > h3 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      &::before {
+        content: "03.";
+        margin-right: 10px;
+        color: $fonttourquoise;
+      }
+    }
+    &__intro h4 {
+      font-size: 2.7rem;
       color: $fonttourquoise;
+      padding: 2rem 0;
+    }
+  }
+}
+
+.project-item {
+  position: relative;
+  height: 40rem;
+  width: 100%;
+  // padding: 2rem;
+  margin-bottom: 10rem;
+  @include responsive(tab-port) {
+    width: 100%;
+    height: 50rem;
+  }
+  @include responsive(tab-port) {
+    width: 100%;
+    height: 33rem;
+  }
+
+  &__view {
+    position: relative;
+    text-align: right;
+    background-image: url("../../assets/images/proj-journal-redux.png");
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include responsive(tab-port) {
+      background-size: cover;
+    }
+  }
+  &__info {
+    opacity: 0.8;
+    padding: 2rem;
+    background-color: $background-soft;
+    width: 60%;
+    position: absolute;
+   
+  }
+  &__badge {
+    padding: 1rem;
+    color: $fonttourquoise;
+    font-weight: bolder;
+  }
+  &__info__title {
+    padding: 1rem;
+    font-size: 2.7rem;
+  }
+  &__text {
+    padding: 1rem;
+    font-size: 2rem;
+    color: silver;
+  }
+  &__tech {
+    display: flex;
+    list-style: none;
+    // padding: 1rem;
+    & li {
+      padding: 1rem;
+    }
+  }
+  &__social {
+    display: flex;
+    list-style: none;
+    & li {
+      padding: 1rem;
+      font-size: 2rem;
+      a {
+        &:visited,
+        &:link {
+          color: $fonttourquoise;
+        }
+      }
+    }
+  }
+
+  &--1 {
+    text-align: right;
+    & .project-item__tech {
+      justify-content: flex-end;
+    }
+    & .project-item__social {
+      justify-content: flex-end;
+    }
+    & .project-item__info {
+      left: 42%;
+      top: 20%;
+      @include responsive(tab-port) {
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+      }
+    }
+    & .project-item__view {
+      background-position: left;
+    }
+  }
+  &--2 {
+    & .project-item__tech {
+      justify-content: flex-start;
+    }
+    & .project-item__social {
+      justify-content: flex-start;
+    }
+    & .project-item__info {
+      text-align: left;
+      left: 0%;
+      top: 20%;
+      @include responsive(tab-port) {
+        height: 100%;
+        width: 100%;
+        left: 0%;
+        top: 0%;
+      }
+    }
+    & .project-item__view {
+      background-position: right;
     }
   }
 }

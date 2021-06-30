@@ -1,0 +1,25 @@
+.contact-me {
+  display: flex;
+  a {
+    align-self: center;
+    text-decoration:  none;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+  }
+  &__heading {
+    padding: 2rem;
+    font-size: 4rem;
+    text-align: center;
+  }
+  &__message {
+    color: silver;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin: 2rem auto 6rem auto;
+  }
+  
+}

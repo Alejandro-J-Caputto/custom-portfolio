@@ -1,0 +1,20 @@
+.my-footer {
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: -6rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  .socials {
+    &__list {
+      list-style: none;
+      justify-content: center;
+      display: flex;
+      &__item {
+        color: $fonttourquoise;
+        font-size: 3rem;
+        padding: 2rem;
+      }
+    }
+  }
+}
