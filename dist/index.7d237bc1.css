@@ -155,7 +155,8 @@ body.menu-open {
   border-radius: 5px;
   transition: transform 1s;
   border: 2px solid #68e1fd;
-  width: fit-content;
+  width: 15rem;
+  text-align: center;
   text-decoration: none;
 }
 
