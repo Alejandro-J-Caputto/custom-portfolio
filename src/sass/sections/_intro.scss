@@ -1,13 +1,13 @@
 header {
-    margin: 0 auto;
-    padding: 100px 0;
-    max-width: 1100px;
-    @include responsive(phone) {
-      padding: 30px 0;
-    }
-    @include responsive(big-desktop) {
-      padding: 200px 0;
-    }
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 1100px;
+  @include responsive(phone) {
+    padding: 30px 0;
+  }
+  @include responsive(big-desktop) {
+    padding: 200px 0;
+  }
 }
 .intro-wall {
   position: relative;
@@ -15,15 +15,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  // width: 90%;
-  // background-color: turquoise;
-  // flex-wrap: wrap;
-  // padding:  35rem 5rem;
   height: 95vh;
   align-items: center;
   margin-top: 5rem;
   div:not(.intro-wall__hero) {
-    // width: 80%;
     padding: 2rem;
   }
   &__hero {
@@ -43,11 +38,11 @@ header {
     position: absolute;
     left: 50%;
     z-index: 20;
-    opacity: .8;
+    opacity: 0.8;
     @include responsive(phone) {
       // position: static;
       left: 0;
-      opacity: .3;
+      opacity: 0.3;
     }
   }
   &__message {
@@ -59,14 +54,13 @@ header {
     p:first-child {
       color: $fonttourquoise;
       font-size: 2rem;
-      letter-spacing: .3rem;
+      letter-spacing: 0.3rem;
     }
     z-index: 200;
     &--heading {
       font-size: 7rem;
       @include responsive(phone) {
         font-size: 5rem;
-
       }
     }
     &--heading-2 {
@@ -89,6 +83,5 @@ header {
       width: 50%;
       font-weight: 700;
     }
-
   }
 }

@@ -71,6 +71,7 @@ body {
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 @media (max-width: 75em) {
   html {
@@ -223,6 +224,7 @@ body.menu-open {
   top: -20%;
   right: -14%;
   border-radius: 7rem;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   z-index: 11000;
 }
 @media (max-width: 37.5em) {
@@ -293,6 +295,9 @@ body.menu-open {
 @media (max-width: 37.5em) {
   .nav-items {
     flex-direction: column;
+  }
+  .nav-items a {
+    width: 100%;
   }
 }
 .nav-items li {
@@ -769,13 +774,7 @@ header {
   width: 100%;
   margin-bottom: 10rem;
 }
-@media (max-width: 56.25em) {
-  .project-item {
-    width: 100%;
-    height: 50rem;
-  }
-}
-@media (max-width: 56.25em) {
+@media (max-width: 37.5em) {
   .project-item {
     width: 100%;
     height: 33rem;
@@ -784,7 +783,6 @@ header {
 .project-item__view {
   position: relative;
   text-align: right;
-  background-image: url("../../assets/images/proj-journal-redux.png");
   height: 100%;
   width: 100%;
   background-size: contain;
@@ -794,6 +792,15 @@ header {
   .project-item__view {
     background-size: cover;
   }
+}
+.project-item__view--1 {
+  background-image: url("../../assets/images/proj-journal-redux.png");
+}
+.project-item__view--2 {
+  background-image: url("../../assets/images/proj-todo-def.png");
+}
+.project-item__view--3 {
+  background-image: url("../../assets/images/manager-API.png");
 }
 .project-item__info {
   opacity: 0.8;
@@ -840,18 +847,35 @@ header {
 .project-item--1 .project-item__tech {
   justify-content: flex-end;
 }
+@media (max-width: 56.25em) {
+  .project-item--1 .project-item__tech {
+    justify-content: flex-start;
+  }
+}
 .project-item--1 .project-item__social {
   justify-content: flex-end;
+}
+@media (max-width: 56.25em) {
+  .project-item--1 .project-item__social {
+    justify-content: flex-start;
+  }
 }
 .project-item--1 .project-item__info {
   left: 42%;
   top: 20%;
 }
+.project-item--1 .project-item__info.api {
+  top: 13.5%;
+}
 @media (max-width: 56.25em) {
   .project-item--1 .project-item__info {
+    text-align: left;
     height: 100%;
     width: 100%;
     left: 0%;
+    top: 0%;
+  }
+  .project-item--1 .project-item__info.api {
     top: 0%;
   }
 }
@@ -867,7 +891,7 @@ header {
 .project-item--2 .project-item__info {
   text-align: left;
   left: 0%;
-  top: 20%;
+  top: 15%;
 }
 @media (max-width: 56.25em) {
   .project-item--2 .project-item__info {

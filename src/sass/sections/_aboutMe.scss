@@ -1,5 +1,4 @@
 .about-me {
-  // height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +22,7 @@
         font-size: 3rem;
         margin-bottom: 20px;
         &::before {
-          content: '01.';
+          content: "01.";
           margin-right: 10px;
           color: $fonttourquoise;
         }
@@ -32,7 +31,7 @@
         font-size: 2rem;
         margin-right: 5rem;
         line-height: 2.5rem;
-        @include responsive (phone) {
+        @include responsive(phone) {
           font-size: 2.5rem;
           margin-right: unset;
         }
@@ -56,7 +55,6 @@
         min-width: 30rem;
         min-height: 30rem;
         display: inline-block;
-        // filter: contrast(175%) brightness(70%);
         border-radius: 5px;
         @include responsive(phone) {
           width: 40rem;
@@ -64,21 +62,21 @@
         }
       }
       &::before {
-        content: '';
+        content: "";
         width: 30rem;
         height: 30rem;
         background-color: $fonttourquoise;
         display: block;
         position: absolute;
         z-index: 600;
-        opacity: .3;
+        opacity: 0.3;
         @include responsive(phone) {
           width: 40rem;
           height: 40rem;
         }
       }
       &::after {
-        content: '';
+        content: "";
         width: 30rem;
         height: 30rem;
         display: block;
@@ -87,7 +85,7 @@
         top: 10%;
         left: 10%;
         border-radius: 5px;
-        
+
         z-index: 1;
         @include responsive(phone) {
           display: none;

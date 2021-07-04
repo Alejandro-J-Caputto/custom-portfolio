@@ -89,24 +89,6 @@ export class NavigationStickyAndDroppable {
       scrollCurrentPosition = document.body.getBoundingClientRect().top;
     });
   }
-  // Media Query Programatically with Rxjs
-  // navCollapase():void {
-  //   const mediaQueryTabPort = window.matchMedia('(max-width: 900px)');
-  //   const withViewHandler = (event) => {
-  //     if (event.matches) {
-  //       this.navigation.style.backgroundColor = 'pink'
-  //     } else {
-  //       this.navigation.style.background = 'blue'
-  //     }
-  //   }
-  //   const windowWitdh$ = fromEvent(mediaQueryTabPort, 'change');
-
-  //   windowWitdh$.subscribe(event=> {
-  //     console.log(event)
-  //     withViewHandler(event);
-  //   })
-
-  // }
   toggleMenu() {
     this.navigationButton.addEventListener(
       "click",
@@ -135,9 +117,6 @@ export class NavigationStickyAndDroppable {
       }
       const liItem = event.target as HTMLLIElement;
       if (!liItem.classList.contains("navigation__link--app")) {
-        // if(this.navigation.classList.contains('hide')) {
-        //   this.navigation.classList.remove('hide')
-        // }
         event.preventDefault();
         const id = liItem.getAttribute("href");
         document.querySelector(id!)?.scrollIntoView({ behavior: "smooth" });

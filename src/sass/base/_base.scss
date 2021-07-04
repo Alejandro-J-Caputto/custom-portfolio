@@ -12,7 +12,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-
+  scroll-behavior: smooth;
   @include responsive(tab-land) {
     font-size: 56.25%;
   }

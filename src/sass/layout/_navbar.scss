@@ -1,5 +1,4 @@
 .navigation {
-  // display: flex;
   z-index: 1400;
   position: fixed;
   top: 0;
@@ -35,7 +34,6 @@
       right: 4%;
       border-radius: 50%;
       background-image: radial-gradient($background, $background-soft);
-      // transform: scale(1000);
       transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
     }
   }
@@ -47,6 +45,7 @@
     top: -20%;
     right: -14%;
     border-radius: 7rem;
+    box-shadow: $shadow-dark;
     z-index: 11000;
     // display: none;
     @include responsive(phone) {
@@ -73,20 +72,6 @@
       margin-bottom: 8px;
     }
   }
-  // &__background {
-  //   position: fixed;
-  //   z-index: 600;
-  //   background-color: orangered;
-  //   height: 7rem;
-  //   width: 7rem;
-  //   top: 4%;
-  //   right: 8%;
-  //   border-radius: 7rem;
-  //   display: none;
-  //   @include responsive (phone) {
-  //     display: unset;
-  //   }
-  // }
 }
 .nav {
   display: flex;
@@ -129,6 +114,9 @@
     align-items: baseline;
     @include responsive(phone) {
       flex-direction: column;
+      a {
+        width: 100%;
+      }
     }
     & li {
       position: relative;
