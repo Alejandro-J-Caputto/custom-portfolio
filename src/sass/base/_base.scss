@@ -12,6 +12,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
   @include responsive(tab-land) {
     font-size: 56.25%;
   }
@@ -37,6 +38,14 @@ section {
     padding: 200px 0;
   }
 }
+
+
+body.menu-open {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+
 //scrollbar
 /* width */
 ::-webkit-scrollbar {

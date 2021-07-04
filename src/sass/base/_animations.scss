@@ -1,0 +1,46 @@
+@keyframes showYourself {
+  0% {
+    top: -15%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes fadeInScroll {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.initialVisibility {
+  opacity: 0;
+}
+// .fade-in {
+//   animation: fadeInScroll 2s ease-in-out .5s;
+//   // opacity: 1;
+// }
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+.fade-in.active.delay {
+  transition-delay: 2s;
+}
+.hide {
+  // top: -15%;
+  display: none;
+}
+// .hide {
+//   transform: translateY(-100%);
+//   transition: transform 250ms ease-in;
+// }
+// .hide.back {
+//   // top: 0%;
+//   transform: translateY(0%);
+// }

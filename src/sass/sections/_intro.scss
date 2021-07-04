@@ -1,3 +1,14 @@
+header {
+    margin: 0 auto;
+    padding: 100px 0;
+    max-width: 1100px;
+    @include responsive(phone) {
+      padding: 30px 0;
+    }
+    @include responsive(big-desktop) {
+      padding: 200px 0;
+    }
+}
 .intro-wall {
   position: relative;
   display: flex;
@@ -31,7 +42,7 @@
   &__hero {
     position: absolute;
     left: 50%;
-    z-index: 0;
+    z-index: 20;
     opacity: .8;
     @include responsive(phone) {
       // position: static;
@@ -50,7 +61,7 @@
       font-size: 2rem;
       letter-spacing: .3rem;
     }
-    z-index: 5000;
+    z-index: 200;
     &--heading {
       font-size: 7rem;
       @include responsive(phone) {

@@ -51,7 +51,7 @@
 
       img {
         position: absolute;
-        z-index: 1000;
+        z-index: 500;
         width: 30rem;
         min-width: 30rem;
         min-height: 30rem;
@@ -70,7 +70,7 @@
         background-color: $fonttourquoise;
         display: block;
         position: absolute;
-        z-index: 8000;
+        z-index: 600;
         opacity: .3;
         @include responsive(phone) {
           width: 40rem;

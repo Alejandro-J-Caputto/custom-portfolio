@@ -15,29 +15,40 @@
       src="https://kit.fontawesome.com/cd9184cd3c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Alejandro Caputto Web Portfolio</title>
-    <script defer src="./ts/main.ts"></script>
+    <script defer src="./js/ts/main.js"></script>
   </head>
   <body>
-    <main class="layout-wrapper">
-      <div id="navigation">
+    <div for="navi-toggle" class="navigation__button" >
+      <div class="navigation__icon navigation__icon--1">&nbsp;</div>
+      <div class="navigation__icon navigation__icon--2">&nbsp;</div>
+      <div class="navigation__icon navigation__icon--3">&nbsp;</div>
+    </div>
+    <div class="navigation__background">&nbsp;</div>
+    
+    <div id="navigation" class="navigation">
         <nav class="nav">
-          <img
-            src="./assets/images/logo-portfolio.png"
-            alt="nav logo"
-            class="nav-logo"
-          />
+
+            <img
+              src="./assets/images/logo-portfolio.png"
+              alt="nav logo"
+              class="nav-logo"
+            />
+
           <ul class="nav-items">
-            <li>01. About</li>
-            <li>02. Stack</li>
-            <li>03. Works</li>
-            <li>04. Contact</li>
+            <li> <a href="#about" > 01. About</a></li>
+            <li> <a href="#it-stack" > 02. Stack</a></li>
+            <li> <a href="#works" > 03. Works</a></li>
+            <li> <a href="#contact" > 04. Contact</a></li>
+            <!-- <li></li> -->
+            <a href="./assets/personal/web-dev-en.pdf" target="_blank" class="btn btn-contact" rel="noopener noreferrer">Resume</a>
           </ul>
         </nav>
       </div>
-      <section id="intro" class="intro-wall">
-        <div class="intro-wall__message">
+      <section id="intro" class="intro-wall fade-in">
+        <div class="intro-wall__message ">
           <p>Hi my name is,</p>
           <h1 class="intro-wall__message--heading">Alejandro Caputto.</h1>
           <h2 class="intro-wall__message--heading-2">
@@ -56,7 +67,8 @@
           <img src="./assets/images/code-hero-hell.png" alt="intro hero" />
         </div>
       </section>
-      <section class="about-me" id="about">
+    <main class="layout-wrapper">
+      <section class="about-me fade-in" id="about">
         <div class="about-me__card">
           <div class="about-me__card-description">
             <h3 class="heading-tertiray--section">About Me</h3>
@@ -76,7 +88,7 @@
         </div>
       </section>
       <!-- -------SKILLS SECTION ---------->
-      <section id="it-stack">
+      <section id="it-stack" class="fade-in">
         <div class="stack-container">
           <div class="stack-description">
             <h3>Technological Stack</h3>
@@ -146,70 +158,8 @@
           </div>
         </div>
       </section>
-      <!-- <section id="it-skills">
-        <div class="skills-description">
-          <h3>Tech Stack</h3>
-          <p class="paragraph-introduction">
-            Hi! I'm Alejandro and I enjoy developing and learning. My interest
-            in web development is not new! I was studying computer science when
-            I decided to boost my progress by enrolling in a web development
-            Bootcamp acquiring solid knowledge of information architecture,
-            usability, web analytics and accessibility, among others. My one aim
-            in the coming years is to continue learning and growing as a
-            developer in an amazing team!
-          </p>
-        </div>
-        <div class="skills">
-          <div class="skills-group">
-            <div class="skill-group__icon">
-              <i class="fas fa-pencil-ruler"></i>
-            </div>
-            <div class="skill-group__head">
-              <h3>Design</h3>
-            </div>
-            <div class="skill-group__body">
-              <p>Sketch</p>
-              <p>Photoshop</p>
-              <p>Luma Fusion</p>
-            </div>
-          </div>
-          <div class="skills-group">
-            <div class="skill-group__icon">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="skill-group__head">
-              <h3>Front-end</h3>
-            </div>
-            <div class="skill-group__body">
-              <p>React</p>
-              <p>Angular</p>
-              <p>JavaScript</p>
-              <p>Typescript</p>
-              <p>CSS3</p>
-              <p>SASS</p>
-            </div>
-          </div>
-          <div class="skills-group">
-            <div class="skill-group__icon">
-              <i class="fas fa-server"></i>
-            </div>
-            <div class="skill-group__head">
-              <h3>Back-end</h3>
-            </div>
-            <div class="skill-group__body">
-              <p>Node.js</p>
-              <p>MySQL & Workbench</p>
-              <p>MongoDB</p>
-              <p>Mongoose</p>
-              <p>Express</p>
-              <p>API Rest</p>
-              <p>MySQL & Workbench</p>
-            </div>
-          </div>
-        </div>
-      </section> -->
       
-      <section class="projects">
+      <section id="works" class="projects fade-in">
         <div class="projects-colection">
           <div class="projects-colection__intro">
             <h3>Some things I've build</h3>
@@ -239,9 +189,9 @@
                   <li>Sass</li>
                 </ul>
                 <ul class="project-item__social">
-                  <li><a href="#"><i class="fab fa-github"></i></a></li>
-                  <li><a href="#"><i class="fas fa-external-link-alt"></i></a></li>
-                  <li><a href="#"><i class="fab fa-youtube"></a></li>
+                  <li><a href="https://github.com/Alejandro-J-Caputto/journal-redux" target="_blank"><i class="fab fa-github"></i></a></li>
+                  <li><a href="https://react-app-crud-9b06e.web.app/auth/login" target="_blank"><i class="fas fa-external-link-alt"></i></a></li>
+                  <li><a href="https://www.youtube.com/watch?v=w4sKcW-C-Aw" target="_blank"><i class="fab fa-youtube"></a></li>
                 </ul>
               </div>
             </div>
@@ -250,11 +200,11 @@
             <div class="project-item__view">
               <div class="project-item__info">
                 <span class="project-item__badge">Featured</span>
-                <h3 class="project-item__info__title">Journal Redux</h3>
+                <h3 class="project-item__info__title">Manager App React-Ts</h3>
                 <p class="project-item__text">
-                  An small app based on react-hooks & react-redux. <br />
-                  an event and write what you need and update <br />
-                  a photo stored in cloudinary
+                  An small based trello app. Developed with React & Typescript
+                  Is a single page application<br />
+                  I've developed my own API with MongoDB, Mongoose & Express.
                 </p>
                 <ul class="project-item__tech">
                   <li>React</li>
@@ -264,16 +214,17 @@
                   <li>Sass</li>
                 </ul>
                 <ul class="project-item__social">
-                  <li><a href="#"><i class="fab fa-github"></i></a></li>
-                  <li><a href="#"><i class="fas fa-external-link-alt"></i></a></li>
-                  <li><a href="#"><i class="fab fa-youtube"></a></li>
+                  <li><a href="https://github.com/Alejandro-J-Caputto/manager-app-react" target="_blank"><i class="fab fa-github"></i></a></li>
+                  <li><a href="https://manager-app-react.vercel.app/auth/login" target="_blank"><i class="fas fa-external-link-alt"></i></a></li>
+                  <li><a href="https://www.youtube.com/watch?v=h0vXXSA-gTA" target="_blank"><i class="fab fa-youtube"></a></li>
+                  <li><a href="https://documenter.getpostman.com/view/10275017/TzJpifaj" target="_blank"><i class="fas fa-book"></i></a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="contact" class="contact-me">
+      <section id="contact" class="contact-me fade-in">
         <div class="contact-me__container">
           <h4 class="contact-me__heading">Give me the opportunity :)</h4>
           <p class="contact-me__message">
@@ -290,15 +241,12 @@
           >
         </div>
       </section>
-      <section class="my-footer">
+      <section id="contact" class="my-footer fade-in">
         <div class="socials">
-          <ul class="socials__list">
-            <li class="socials__list__item"><i class="fab fa-github"></i></li>
-            <li class="socials__list__item"><i class="fab fa-linkedin"></i></li>
-            <li class="socials__list__item"><i class="fab fa-youtube"></i></li>
-            <li class="socials__list__item">
-              <i class="fab fa-instagram"></i>
-            </li>
+          <ul class="socials__list project-item__social">
+            <li class="socials__list__item"><a href="https://github.com/Alejandro-J-Caputto" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li class="socials__list__item"><a href="https://www.linkedin.com/in/alejandro-caputto-frias-49aa5819b/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li class="socials__list__item"><a href="https://www.youtube.com/channel/UCC_s1K-we_H0ACR2j_in-Bg" target="_blank"><i class="fab fa-youtube"></i></a></li>
           </ul>
         </div>
       </section>
