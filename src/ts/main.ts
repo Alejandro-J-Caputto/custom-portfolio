@@ -1,8 +1,9 @@
-import { fromEvent } from "rxjs";
 import { NavigationStickyAndDroppable } from "./navigation";
-import { SectionFaders } from './sectionsEffects';
+import { SectionFaders } from "./sectionsEffects";
 
-const navigationInit = new NavigationStickyAndDroppable();
-const sectionEffects = new SectionFaders();
+const initDomFeatures = () => {
+  const navigationInit = new NavigationStickyAndDroppable();
+  const sectionEffects = new SectionFaders();
+};
 
-
+initDomFeatures();

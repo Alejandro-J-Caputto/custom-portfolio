@@ -446,8 +446,11 @@ id) /*: string*/
 Object.defineProperty(exports, "__esModule", { value: true });
 const navigation_1 = require("./navigation");
 const sectionsEffects_1 = require("./sectionsEffects");
-const navigationInit = new navigation_1.NavigationStickyAndDroppable();
-const sectionEffects = new sectionsEffects_1.SectionFaders();
+const initDomFeatures = () => {
+    const navigationInit = new navigation_1.NavigationStickyAndDroppable();
+    const sectionEffects = new sectionsEffects_1.SectionFaders();
+};
+initDomFeatures();
 
 },{"./navigation":"47X3p","./sectionsEffects":"1vEyk"}],"47X3p":[function(require,module,exports) {
 "use strict";

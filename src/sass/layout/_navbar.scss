@@ -65,7 +65,6 @@
     height: 2px;
     width: 3rem;
     background-color: $background-soft;
-
     z-index: 5000;
     transition: all 0.2s;
     &:not(:last-child) {
@@ -75,10 +74,12 @@
 }
 .nav {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   padding: 2rem 5rem;
-
+  &-brand {
+    flex: 0 0 25%;
+  }
   @include responsive(phone) {
     padding: 2rem 2rem;
     flex-direction: column;
@@ -90,6 +91,14 @@
     width: 100%;
     transform: translate(-50%, -50%);
     transition: left 0.5s ease-in;
+    &-brand {
+      flex: 0 0 0;
+    }
+    .btn-resume {
+      // padding: 4rem;
+      width: 180px;
+      text-align: center;
+    }
     &-items {
       text-align: center;
       margin-top: 5rem;
@@ -109,22 +118,23 @@
   }
   &-items {
     display: flex;
+    flex: 0 0 65%;
     list-style: none;
-    justify-content: baseline;
+    justify-content: flex-end;
     align-items: baseline;
+
     @include responsive(phone) {
       flex-direction: column;
+      flex-basis: 0;
       a {
         width: 100%;
       }
     }
     & li {
       position: relative;
-      &:not(:last-child) {
-        margin-right: 5px;
-      }
+      margin-right: 5px;
     }
-    & li:not(:last-child)::before {
+    & li::before {
       content: "";
       height: 100%;
       position: absolute;
