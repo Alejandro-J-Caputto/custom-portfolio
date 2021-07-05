@@ -485,7 +485,7 @@ class NavigationStickyAndDroppable {
             }
         };
         const obsOptions = {
-            rootMargin: "-90% 0px 0px 0px",
+            rootMargin: "0px 0px 0px 0px",
         };
         const introObserver$ = new IntersectionObserver(stickyNavigation, obsOptions);
         introObserver$.observe(this.introSection);
@@ -503,7 +503,7 @@ class NavigationStickyAndDroppable {
                 this.navigation.classList.remove("hide");
                 this.navigation.classList.remove("back");
             }
-            else {
+            if (document.body.getBoundingClientRect().top > 500) {
                 this.navigation.classList.add("hide");
                 this.navigation.classList.add("back");
             }
@@ -521,6 +521,7 @@ class NavigationStickyAndDroppable {
         if (document.body.getBoundingClientRect().width <= 600) {
             this.navigation.classList.remove('hide');
         }
+        this.navigation.classList.toggle('display-phone');
         this.backgroundExpandable.classList.toggle("bg__shown");
         this.navbar.classList.toggle("nav__shown");
         this.navIconMenu.classList.toggle("icon-hide__partial");

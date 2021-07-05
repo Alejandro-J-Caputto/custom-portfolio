@@ -54,7 +54,7 @@ export class NavigationStickyAndDroppable {
     const obsOptions = {
       // root: null,
       // threshold: [0.1],
-      rootMargin: "-90% 0px 0px 0px",
+      rootMargin: "0px 0px 0px 0px",
     };
     const introObserver$ = new IntersectionObserver(
       stickyNavigation,
@@ -81,7 +81,8 @@ export class NavigationStickyAndDroppable {
       if (document.body.getBoundingClientRect().top > scrollCurrentPosition) {
         this.navigation.classList.remove("hide");
         this.navigation.classList.remove("back");
-      } else {
+      } 
+      if (document.body.getBoundingClientRect().top > 500){
         this.navigation.classList.add("hide");
         this.navigation.classList.add("back");
       }
@@ -106,6 +107,7 @@ export class NavigationStickyAndDroppable {
       this.navigation.classList.remove('hide')
     }
     // this.navigation.classList.toggle("hide");
+    this.navigation.classList.toggle('display-phone')
     this.backgroundExpandable.classList.toggle("bg__shown");
     this.navbar.classList.toggle("nav__shown");
     this.navIconMenu.classList.toggle("icon-hide__partial");
