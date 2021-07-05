@@ -480,7 +480,7 @@ class NavigationStickyAndDroppable {
     hideNavAfterIntro() {
         const stickyNavigation = (entries, observer$) => {
             const [entry] = entries;
-            if (entry.isIntersecting === false) {
+            if (!entry.isIntersecting) {
                 this.navigation.classList.add("hide");
             }
         };
@@ -499,14 +499,12 @@ class NavigationStickyAndDroppable {
         const scrollObs$ = rxjs_1.fromEvent(document, "scroll");
         let scrollCurrentPosition = 0;
         scrollObs$.subscribe((_event) => {
-            if (document.body.getBoundingClientRect().width <= 600) {
-                return;
-            }
             if (document.body.getBoundingClientRect().top > scrollCurrentPosition) {
                 this.navigation.classList.remove("hide");
                 this.navigation.classList.remove("back");
             }
             else {
+                this.navigation.classList.add("hide");
                 this.navigation.classList.add("back");
             }
             scrollCurrentPosition = document.body.getBoundingClientRect().top;
@@ -520,7 +518,9 @@ class NavigationStickyAndDroppable {
     }
     toggleMenuHandler() {
         this.blockScrollWhenMenuDisplayed();
-        this.navigation.classList.toggle("hide");
+        if (document.body.getBoundingClientRect().width <= 600) {
+            this.navigation.classList.remove('hide');
+        }
         this.backgroundExpandable.classList.toggle("bg__shown");
         this.navbar.classList.toggle("nav__shown");
         this.navIconMenu.classList.toggle("icon-hide__partial");

@@ -47,7 +47,7 @@ export class NavigationStickyAndDroppable {
     ) => {
       // console.log(observer$)
       const [entry] = entries;
-      if (entry.isIntersecting === false) {
+      if (!entry.isIntersecting) {
         this.navigation.classList.add("hide");
       }
     };
@@ -75,14 +75,14 @@ export class NavigationStickyAndDroppable {
     let scrollCurrentPosition = 0;
 
     scrollObs$.subscribe((_event) => {
-      if (document.body.getBoundingClientRect().width <= 600) {
-        return;
-      }
+      // if (document.body.getBoundingClientRect().width <= 600) {
+      //   return;
+      // }
       if (document.body.getBoundingClientRect().top > scrollCurrentPosition) {
         this.navigation.classList.remove("hide");
         this.navigation.classList.remove("back");
       } else {
-        // this.navigation.classList.add("hide");
+        this.navigation.classList.add("hide");
         this.navigation.classList.add("back");
       }
       scrollCurrentPosition = document.body.getBoundingClientRect().top;
@@ -102,7 +102,10 @@ export class NavigationStickyAndDroppable {
     // if (this.navigation.classList.contains("hide")) {
     //   this.navigation.classList.remove("hide");
     // }
-    this.navigation.classList.toggle("hide");
+    if(document.body.getBoundingClientRect().width <= 600) {
+      this.navigation.classList.remove('hide')
+    }
+    // this.navigation.classList.toggle("hide");
     this.backgroundExpandable.classList.toggle("bg__shown");
     this.navbar.classList.toggle("nav__shown");
     this.navIconMenu.classList.toggle("icon-hide__partial");
