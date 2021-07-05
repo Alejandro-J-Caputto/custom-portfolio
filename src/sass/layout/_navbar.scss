@@ -113,7 +113,7 @@
     width: 5rem;
     cursor: pointer;
     @include responsive(phone) {
-      width: 20rem;
+      width: 10rem;
     }
   }
   &-items {

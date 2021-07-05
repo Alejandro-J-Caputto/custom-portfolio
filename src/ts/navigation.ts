@@ -15,8 +15,8 @@ export class NavigationStickyAndDroppable {
   constructor() {
     this.selectors();
     this.toggleMenu();
-    this.hideNavAfterIntro();
-    this.displayNavOnScrollUp();
+    // this.hideNavAfterIntro();
+    // this.displayNavOnScrollUp();
     this.navigateTo();
     // this.navCollapase();
   }

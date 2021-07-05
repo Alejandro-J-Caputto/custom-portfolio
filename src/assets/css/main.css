@@ -293,7 +293,7 @@ body.menu-open {
 }
 @media (max-width: 37.5em) {
   .nav img {
-    width: 20rem;
+    width: 10rem;
   }
 }
 .nav-items {
