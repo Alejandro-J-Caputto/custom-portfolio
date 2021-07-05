@@ -11,9 +11,8 @@ export class SectionFaders {
     this.fadableSections = document.querySelectorAll("section");
   }
   fadeInSectionConfig(): void {
-    console.log("hello");
     const appearsOptions = {
-      threshold: .3
+      threshold: 0.3,
     };
     // this.introSection.classList.add('active');
     const sectionAppearsOnScroll$ = new IntersectionObserver(function (

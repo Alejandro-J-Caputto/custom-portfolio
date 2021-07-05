@@ -24,6 +24,7 @@
 
     // transform: scale(100);
   }
+  
   &__background {
     @include responsive(phone) {
       z-index: 10500;
